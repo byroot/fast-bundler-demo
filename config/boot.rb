@@ -8,7 +8,7 @@ else
   $LOAD_PATH.unshift(File.expand_path('../../vendor/bundler/lib', __FILE__))
 
   require 'bundler'
-  Bundler::CachedRuntime.blacklist += %w(snappy oj stackprof)
+  Bundler::CachedRuntime.blacklist += %w(json snappy oj stackprof)
   Bundler.runtime_implementation = Bundler::CachedRuntime
 end
 

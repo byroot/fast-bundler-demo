@@ -1,5 +1,7 @@
 #!/bin/bash
 
+rm -rf "$(ruby -rtmpdir -e 'print Dir.tmpdir')/bundler-cache-*"
+
 echo "== Booting without cache:"
 NO_REQUIRE_CACHE=1 NOEXEC_DISABLE=1 time rails r 'puts "$LOAD_PATH.size => #{$LOAD_PATH.size}"'
 echo
