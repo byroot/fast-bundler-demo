@@ -1,0 +1,4 @@
+[submodule "vendor/bundler"]
+	path = vendor/bundler
+	url = git@github.com:byroot/bundler.git
+	branch = experimental-fast-setup

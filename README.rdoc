@@ -1,0 +1,8 @@
+# Fast Bundler Demo
+
+Usage:
+
+```sh
+bundle install
+./script/benchmark
+```

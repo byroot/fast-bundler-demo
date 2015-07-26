@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "== Booting without cache:"
+NO_REQUIRE_CACHE=1 NOEXEC_DISABLE=1 time rails r 'puts "$LOAD_PATH.size => #{$LOAD_PATH.size}"'
+echo
+
+echo "== Warming cache (unless already present):"
+NOEXEC_DISABLE=1 time rails r 'puts "$LOAD_PATH.size => #{$LOAD_PATH.size}"'
+echo
+
+echo "== Fast boot:"
+NOEXEC_DISABLE=1 time rails r 'puts "$LOAD_PATH.size => #{$LOAD_PATH.size}"'
+echo
